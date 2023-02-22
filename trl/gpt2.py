@@ -73,7 +73,7 @@ class ValueHead(nn.Module):
 # Cell
 class GPT2HeadWithValueModel(GPT2PreTrainedModel):
     """The GPT2HeadWithValueModel class implements a GPT2 language model with a secondary, scalar head."""
-    def __init__(self, config,if_GPT2LMHeadModel=True):
+    def __init__(self, config,if_GPT2LMHeadModel=False):
         super().__init__(config)
         config.num_labels = 1
         self.transformer = GPT2Model(config) if not if_GPT2LMHeadModel else GPT2LMHeadModel(config)
@@ -116,7 +116,7 @@ class GPT2HeadWithValueModel(GPT2PreTrainedModel):
             use_cache=use_cache,
         )
         hidden_states = transformer_outputs[0]               # (batch, seq_len, 768)
-        print('hidden_states shape:',hidden_states.shape )
+        print( 'hidden_states shape:',hidden_states.shape )
         lm_logits = self.lm_head(hidden_states)              # (batch, seq_len, vocab_size)
         value = self.v_head(hidden_states).squeeze(-1)       # (batch, seq_len)
         

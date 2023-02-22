@@ -36,7 +36,7 @@ from trl.ppo import PPOTrainer
 from iTrainingLogger import iSummaryWriter
 
 config = {
-    "model_name": 'model',#"uer/gpt2-chinese-cluecorpussmall",
+    "model_name": "uer/gpt2-chinese-cluecorpussmall", #'model',#
     "steps": 20000,
     "batch_size": 4,
     "forward_batch_size": 16,
