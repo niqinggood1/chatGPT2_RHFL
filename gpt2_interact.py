@@ -41,7 +41,7 @@ def set_args():
     parser.add_argument('--vocab_path', default='vocab/vocab.txt', type=str, required=False, help='选择词库')
     parser.add_argument('--model_path', default='model/epoch40', type=str, required=False, help='对话模型路径')
     parser.add_argument('--save_samples_path', default="sample/", type=str, required=False, help="保存聊天记录的文件路径")
-    parser.add_argument('--repetition_penalty', default=1.05, type=float, required=False,
+    parser.add_argument('--repetition_penalty', default=1.005, type=float, required=False,
                         help="重复惩罚参数，若生成的对话重复性较高，可适当提高该参数")
     # parser.add_argument('--seed', type=int, default=None, help='设置种子用于生成随机数，以使得训练的结果是确定的')
     parser.add_argument('--max_len', type=int, default=25, help='每个utterance的最大长度,超过指定长度则进行截断')
@@ -126,14 +126,14 @@ def main():
     history = []
     print('开始和chatbot聊天，输入CTRL + Z以退出')
 
-    text = "你好,我是GPT2机器人，May I HELP YOU   "
-    print("【<*_*>】:  " + "".join(text))
+    text = "你好,我是GPT机器人，May I HELP YOU   "
+    print("【<*_*>】: \t" + "".join(text))
     text_ids = tokenizer.encode(text, add_special_tokens=False)
     history.append(text_ids)
 
     while True:
         try:
-            text = input("USER: \t")
+            text = input("USER:").replace(' ','')
             if args.save_samples_path:
                 samples_file.write("user:{}\n".format(text))
             text_ids = tokenizer.encode(text, add_special_tokens=False)
