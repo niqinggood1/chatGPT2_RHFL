@@ -11,7 +11,7 @@ python interact.py --model_path model/epoch1001  --device 0 (指定0号GPU进行
 ### 预处理数据
 先要将数据转为一行一位发言者的数据形式
 
-  运行 shuheng_preprocess_data.py 将shuheng的数据转化为对话对
+  运行 raw_corpur_process.py 将保险的问答数据转化为对话对
   运行preprocess.py，对data/train.txt对话语料进行tokenize，然后进行序列化保存到data/train.pkl。train.pkl中序列化的对象的类型为List[List],记录对话列表中,每个对话包含的token。
    python preprocess.py --train_path data/train.txt --save_path data/train.pkl
 
