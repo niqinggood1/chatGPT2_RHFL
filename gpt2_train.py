@@ -357,7 +357,7 @@ def calculate_acc(logit, labels, ignore_index=-100):
     n_word = non_pad_mask.sum().item()
     return n_correct, n_word
 
-
+from transformers import AutoTokenizer
 def main():
     # 初始化参数
     args = set_args()
@@ -382,7 +382,8 @@ def main():
     logger.info('using device:{}'.format(device))
 
     # 初始化tokenizer
-    tokenizer = BertTokenizerFast(vocab_file=args.vocab_path, sep_token="[SEP]", pad_token="[PAD]", cls_token="[CLS]")
+    # tokenizer = BertTokenizerFast(vocab_file=args.vocab_path, sep_token="[SEP]", pad_token="[PAD]", cls_token="[CLS]")
+    tokenizer   = AutoTokenizer.from_pretrained("uer/gpt2-chinese-cluecorpussmall")
     args.sep_id = tokenizer.sep_token_id
     args.pad_id = tokenizer.pad_token_id
     args.cls_id = tokenizer.cls_token_id
