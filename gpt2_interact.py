@@ -129,7 +129,7 @@ def main():
     while True:
         try:
             text = input("user:")
-            # text = "你好"
+            text = "你好,我时你的专属机器人  [^_^] "
             if args.save_samples_path:
                 samples_file.write("user:{}\n".format(text))
             text_ids = tokenizer.encode(text, add_special_tokens=False)
@@ -164,7 +164,7 @@ def main():
                 # print("his_text:{}".format(his_text))
             history.append(response)
             text = tokenizer.convert_ids_to_tokens(response)
-            print("chatbot:" + "".join(text))
+            print("([^_^]):" + "".join(text))
             if args.save_samples_path:
                 samples_file.write("chatbot:{}\n".format("".join(text)))
         except KeyboardInterrupt:
