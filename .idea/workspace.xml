@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93a72af7-911e-4761-a676-8271735d1568" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_dialogpt2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sample/samples.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/interact.log" beforeDir="false" afterPath="$PROJECT_DIR$/data/interact.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interact.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_dialogpt2.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_dialogpt2.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,30 +15,40 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/dialogGPT2_RHFL$test_dialogpt2.coverage" NAME="test_dialogpt2 Coverage Results" MODIFIED="1677047772476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/dialogGPT2_RHFL$test_dialogpt2.coverage" NAME="test_dialogpt2 Coverage Results" MODIFIED="1677052457210" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/interact.py">
+        <entry file="file://$PROJECT_DIR$/test_dialogpt2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="174" selection-start-line="174" selection-end-line="174" />
+            <state relative-caret-position="1666">
+              <caret line="142" column="2" selection-start-line="142" selection-start-column="2" selection-end-line="142" selection-end-column="2" />
               <folding>
-                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#173#192#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test_dialogpt2.py">
+        <entry file="file://$PROJECT_DIR$/ppo_sentiment_train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-71">
-              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="319">
+              <caret line="62" column="22" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="22" />
               <folding>
-                <element signature="e#173#192#0" expanded="true" />
+                <element signature="e#24#982#1" />
+                <element signature="e#983#994#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://D:/Python38/Lib/site-packages/transformers/generation_utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="1178" selection-start-line="1178" selection-end-line="1178" />
             </state>
           </provider>
         </entry>
@@ -52,6 +65,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>max_history_len</find>
+      <find>cuda</find>
+      <find>gpt2_tokenizer</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -62,14 +77,14 @@
       <list>
         <option value="$PROJECT_DIR$/interact.py" />
         <option value="$PROJECT_DIR$/test_dialogpt2.py" />
+        <option value="$PROJECT_DIR$/ppo_sentiment_train.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-46" />
-    <option name="y" value="155" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="y" value="344" />
+    <option name="width" value="1244" />
+    <option name="height" value="456" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -147,19 +162,19 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1677045371383</updated>
-      <workItem from="1677045373156" duration="2079000" />
+      <workItem from="1677045373156" duration="8717000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2079000" />
+    <option name="totallyTimeSpent" value="8717000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12556732" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12708019" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" />
@@ -185,10 +200,17 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://D:/Python38/Lib/site-packages/transformers/generation_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="1178" selection-start-line="1178" selection-end-line="1178" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/interact.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="174" selection-start-line="174" selection-end-line="174" />
+        <state relative-caret-position="1783">
+          <caret line="137" lean-forward="true" selection-start-line="137" selection-end-line="137" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
@@ -197,10 +219,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test_dialogpt2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-71">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="1666">
+          <caret line="142" column="2" selection-start-line="142" selection-start-column="2" selection-end-line="142" selection-end-column="2" />
           <folding>
             <element signature="e#173#192#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ppo_sentiment_train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="62" column="22" selection-start-line="62" selection-start-column="22" selection-end-line="62" selection-end-column="22" />
+          <folding>
+            <element signature="e#24#982#1" />
+            <element signature="e#983#994#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -48,7 +48,7 @@ def set_args():
     #                     help='模型参数')
     parser.add_argument('--log_path', default='data/interact.log', type=str, required=False, help='interact日志存放位置')
     parser.add_argument('--vocab_path', default='vocab/vocab.txt', type=str, required=False, help='选择词库')
-    parser.add_argument('--model_path', default='model_epoch40_50w', type=str, required=False, help='对话模型路径')
+    parser.add_argument('--model_path', default='model', type=str, required=False, help='对话模型路径')
     parser.add_argument('--save_samples_path', default="sample/", type=str, required=False, help="保存聊天记录的文件路径")
     parser.add_argument('--repetition_penalty', default=1.0, type=float, required=False,
                         help="重复惩罚参数，若生成的对话重复性较高，可适当提高该参数")
@@ -80,17 +80,16 @@ def create_logger(args):
 
 
 
-
+from transformers import AutoTokenizer
 def main():
     args = set_args()
     logger = create_logger(args)
     # 当用户使用GPU,并且GPU可用时
     args.cuda = torch.cuda.is_available() and not args.no_cuda
-    device = 'cuda' if args.cuda else 'cpu'
+    device = 'cpu'#'cuda' if args.cuda else 'cpu'
     logger.info('using device:{}'.format(device))
     os.environ["CUDA_VISIBLE_DEVICES"] = args.device
-    tokenizer = BertTokenizerFast(vocab_file=args.vocab_path, sep_token="[SEP]", pad_token="[PAD]", cls_token="[CLS]")
-    # tokenizer = BertTokenizer(vocab_file=args.voca_path)
+
     model = GPT2LMHeadModel.from_pretrained(args.model_path)
     model = model.to(device)
     model.eval()
@@ -101,12 +100,11 @@ def main():
         samples_file.write("聊天记录{}:\n".format(datetime.now()))
     # 存储聊天记录，每个utterance以token的id的形式进行存储
 
+    print('# 1 #' * 5)
     history = []
-
-    text = input("你是谁，我们测试下模型的使用")
-    if args.save_samples_path:
-        samples_file.write("user:{}\n".format(text))
-    text_ids = tokenizer.encode(text, add_special_tokens=False)
+    text = "你是谁"
+    tokenizer = BertTokenizerFast(vocab_file=args.vocab_path, sep_token="[SEP]", pad_token="[PAD]", cls_token="[CLS]")
+    text_ids =  tokenizer.encode(text, add_special_tokens=False)
     history.append(text_ids)
     input_ids = [tokenizer.cls_token_id]  # 每个input以[CLS]为开头
 
@@ -115,11 +113,27 @@ def main():
         input_ids.append(tokenizer.sep_token_id)
     input_ids = torch.tensor(input_ids).long().to(device)
     input_ids = input_ids.unsqueeze(0)
-    response = []  # 根据context，生成的response
-    # 最多生成max_len个token
 
-    outputs = model.generate(input_ids=input_ids)
-    print('outputs:',outputs)
+    response = model.generate(input_ids, max_new_tokens=16)
+    text = tokenizer.convert_ids_to_tokens(response.squeeze())
+    print('outputs1:', text)
+    print('outputs1:', text[-16:])
+
+
+
+    print( '# 2 #'*5 )
+    text = "你是谁"
+    gpt2_tokenizer = AutoTokenizer.from_pretrained( "uer/gpt2-chinese-cluecorpussmall" )
+    gpt2_tokenizer.eos_token = gpt2_tokenizer.pad_token
+    input_ids = gpt2_tokenizer.encode(text) ;
+    print('input_ids:',input_ids) ;
+    print('input_:',   gpt2_tokenizer.convert_ids_to_tokens(  input_ids  )  )
+    input_ids = torch.tensor( input_ids ).long().to(device)
+    response = model.generate( input_ids.unsqueeze(dim=0),max_new_tokens=16  )
+    print('response:',response )
+    text = gpt2_tokenizer.convert_ids_to_tokens(  response.squeeze()  )
+    print('outputs:', text      )
+    print('outputs:',text[-16:] )
 
 
 if __name__ == '__main__':
