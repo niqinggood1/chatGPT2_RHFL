@@ -213,7 +213,7 @@ def train_epoch(model, train_dataloader, optimizer, scheduler, logger,
     # save model
     logger.info('saving model for epoch {}'.format(epoch + 1))
     model_path = join(args.save_model_path, 'epoch{}'.format(epoch + 1))
-    if epoch%100 ==0:
+    if epoch%50 ==0:
         if not os.path.exists(model_path):
             os.mkdir(model_path)
         model_to_save = model.module if hasattr(model, 'module') else model
@@ -302,7 +302,7 @@ def train(model, logger, train_dataset, validate_dataset, args):
         validate_losses.append(validate_loss)
 
         # 保存当前困惑度最低的模型，困惑度低，模型的生成效果不一定会越好
-        if (validate_loss < best_val_loss) and epoch >1000:
+        if (validate_loss < best_val_loss) or epoch >1000:
             best_val_loss = validate_loss
             logger.info('saving current best model for epoch {}'.format(epoch + 1))
             model_path = join(args.save_model_path, 'min_ppl_model'.format(epoch + 1))
