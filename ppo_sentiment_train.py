@@ -77,7 +77,7 @@ def ppo_sentiment_train(config,prompts):
 
     gpt2_model = GPT2HeadWithValueModel.from_pretrained(config['model_name'])
     gpt2_model_ref = GPT2HeadWithValueModel.from_pretrained(config['model_name'])
-    gpt2_tokenizer = AutoTokenizer.from_pretrained(config['model_name'])
+    gpt2_tokenizer = AutoTokenizer.from_pretrained("uer/gpt2-chinese-cluecorpussmall")  #(config['model_name'])
     gpt2_tokenizer.eos_token = gpt2_tokenizer.pad_token
     gpt2_model.to(device)
     gpt2_model_ref.to(device)
