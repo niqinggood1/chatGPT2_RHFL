@@ -127,8 +127,11 @@ def load_dataset(logger, args):
 
     # 划分训练集与验证集
     val_num = args.val_num
-    input_list_train = input_list[val_num:]
-    input_list_val = input_list[:val_num]
+    data_len=  len( input_list )
+    print('data len', data_len)
+    train_len = int(0.8 * data_len)
+    input_list_train = input_list[:train_len ]
+    input_list_val = input_list[train_len:]
     # test
     # input_list_train = input_list_train[:24]
     # input_list_val = input_list_val[:24]
