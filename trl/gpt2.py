@@ -116,6 +116,7 @@ class GPT2HeadWithValueModel(GPT2PreTrainedModel):
             use_cache=use_cache,
         )
         hidden_states = transformer_outputs[0]               # (batch, seq_len, 768)
+        print('hidden_states shape:',hidden_states.shape )
         lm_logits = self.lm_head(hidden_states)              # (batch, seq_len, vocab_size)
         value = self.v_head(hidden_states).squeeze(-1)       # (batch, seq_len)
         

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="93a72af7-911e-4761-a676-8271735d1568" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/ppo_sentiment_train.py" beforeDir="false" afterPath="$PROJECT_DIR$/ppo_sentiment_train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trl/gpt2.py" beforeDir="false" afterPath="$PROJECT_DIR$/trl/gpt2.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +19,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_dialogpt2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="105" column="33" selection-start-line="105" selection-start-column="16" selection-end-line="105" selection-end-column="33" />
+            <state relative-caret-position="168">
+              <caret line="116" column="4" lean-forward="true" selection-start-line="116" selection-start-column="4" selection-end-line="116" selection-end-column="59" />
               <folding>
                 <element signature="e#173#192#0" expanded="true" />
               </folding>
@@ -27,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ppo_sentiment_train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="79" column="85" selection-start-line="79" selection-start-column="85" selection-end-line="79" selection-end-column="85" />
+            <state relative-caret-position="168">
+              <caret line="115" column="20" selection-start-line="115" selection-start-column="12" selection-end-line="115" selection-end-column="20" />
               <folding>
                 <element signature="e#24#982#1" />
                 <element signature="e#983#994#0" expanded="true" />
@@ -41,10 +42,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/trl/ppo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="185">
+              <caret line="77" column="8" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/trl/gpt2.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="243">
-              <caret line="78" column="99" lean-forward="true" selection-start-line="78" selection-start-column="99" selection-end-line="78" selection-end-column="99" />
+              <caret line="118" column="56" selection-start-line="118" selection-start-column="51" selection-end-line="118" selection-end-column="56" />
               <folding>
                 <element signature="e#224#311#0" expanded="true" />
               </folding>
@@ -98,8 +108,12 @@
       <find>gpt2_tokenizer</find>
       <find>GPT2Model</find>
       <find>model</find>
-      <find>model_name</find>
       <find>GPT2LMHeadModel</find>
+      <find>generate</find>
+      <find>model_name</find>
+      <find>n_embd</find>
+      <find>GPT2HeadWithValueModel</find>
+      <find>gpt2_model</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -110,8 +124,8 @@
       <list>
         <option value="$PROJECT_DIR$/interact.py" />
         <option value="$PROJECT_DIR$/test_dialogpt2.py" />
-        <option value="$PROJECT_DIR$/trl/gpt2.py" />
         <option value="$PROJECT_DIR$/ppo_sentiment_train.py" />
+        <option value="$PROJECT_DIR$/trl/gpt2.py" />
       </list>
     </option>
   </component>
@@ -198,12 +212,12 @@
       <option name="presentableId" value="Default" />
       <updated>1677045371383</updated>
       <workItem from="1677045373156" duration="9295000" />
-      <workItem from="1677076656548" duration="3515000" />
+      <workItem from="1677076656548" duration="5002000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12810000" />
+    <option name="totallyTimeSpent" value="14297000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
@@ -251,16 +265,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/trl/gpt2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="78" column="99" lean-forward="true" selection-start-line="78" selection-start-column="99" selection-end-line="78" selection-end-column="99" />
-          <folding>
-            <element signature="e#224#311#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gpt2_interact.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1100">
@@ -273,21 +277,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test_dialogpt2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="105" column="33" selection-start-line="105" selection-start-column="16" selection-end-line="105" selection-end-column="33" />
+        <state relative-caret-position="168">
+          <caret line="116" column="4" lean-forward="true" selection-start-line="116" selection-start-column="4" selection-end-line="116" selection-end-column="59" />
           <folding>
             <element signature="e#173#192#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/trl/ppo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="77" column="8" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ppo_sentiment_train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="79" column="85" selection-start-line="79" selection-start-column="85" selection-end-line="79" selection-end-column="85" />
+        <state relative-caret-position="168">
+          <caret line="115" column="20" selection-start-line="115" selection-start-column="12" selection-end-line="115" selection-end-column="20" />
           <folding>
             <element signature="e#24#982#1" />
             <element signature="e#983#994#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trl/gpt2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="118" column="56" selection-start-line="118" selection-start-column="51" selection-end-line="118" selection-end-column="56" />
+          <folding>
+            <element signature="e#224#311#0" expanded="true" />
           </folding>
         </state>
       </provider>

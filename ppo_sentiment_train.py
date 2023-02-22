@@ -115,6 +115,7 @@ def ppo_sentiment_train(config,prompts):
             gen_len = config['gen_len']
             response = gpt2_model.generate(query_tensors[i].unsqueeze(dim=0),
                                            max_new_tokens=gen_len, **gen_kwargs)
+            #response = model.generate(input_ids, max_new_tokens=16)
             response_tensors.append(response.squeeze()[-gen_len:])
         batch['response'] = [gpt2_tokenizer.decode(r.squeeze()) for r in response_tensors]
         timing['time/get_response'] = time.time() - t
