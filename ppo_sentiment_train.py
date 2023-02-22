@@ -158,4 +158,4 @@ def ppo_sentiment_train(config,prompts):
         writer.record()
 
 if __name__ == '__main__':
-    ppo_sentiment_train( )
+    ppo_sentiment_train( config,prompts)
