@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93a72af7-911e-4761-a676-8271735d1568" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/gpt2_train.py" beforeDir="false" afterPath="$PROJECT_DIR$/gpt2_train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/raw_corpur_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/raw_corpur_process.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,7 +12,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/dialogGPT2_RHFL$raw_corpur_process.coverage" NAME="raw_corpur_process Coverage Results" MODIFIED="1677086195745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/dialogGPT2_RHFL$raw_corpur_process.coverage" NAME="raw_corpur_process Coverage Results" MODIFIED="1677087640757" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/dialogGPT2_RHFL$test_dialogpt2.coverage" NAME="test_dialogpt2 Coverage Results" MODIFIED="1677052457210" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
@@ -44,8 +45,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/raw_corpur_process.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+            <state relative-caret-position="230">
+              <caret line="31" column="24" lean-forward="true" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -53,8 +54,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gpt2_train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="304" column="45" selection-start-line="304" selection-start-column="45" selection-end-line="304" selection-end-column="45" />
+            <state relative-caret-position="175">
+              <caret line="309" column="36" lean-forward="true" selection-start-line="309" selection-start-column="36" selection-end-line="309" selection-end-column="36" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -159,8 +160,8 @@
         <option value="$PROJECT_DIR$/test_dialogpt2.py" />
         <option value="$PROJECT_DIR$/ppo_sentiment_train.py" />
         <option value="$PROJECT_DIR$/trl/gpt2.py" />
-        <option value="$PROJECT_DIR$/raw_corpur_process.py" />
         <option value="$PROJECT_DIR$/gpt2_train.py" />
+        <option value="$PROJECT_DIR$/raw_corpur_process.py" />
       </list>
     </option>
   </component>
@@ -274,12 +275,12 @@
       <option name="presentableId" value="Default" />
       <updated>1677045371383</updated>
       <workItem from="1677045373156" duration="9295000" />
-      <workItem from="1677076656548" duration="9864000" />
+      <workItem from="1677076656548" duration="10407000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19159000" />
+    <option name="totallyTimeSpent" value="19702000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
@@ -290,7 +291,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.1109215" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32423207" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -386,15 +387,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/raw_corpur_process.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+        <state relative-caret-position="230">
+          <caret line="31" column="24" lean-forward="true" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/gpt2_train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="304" column="45" selection-start-line="304" selection-start-column="45" selection-end-line="304" selection-end-column="45" />
+        <state relative-caret-position="175">
+          <caret line="309" column="36" lean-forward="true" selection-start-line="309" selection-start-column="36" selection-end-line="309" selection-end-column="36" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>

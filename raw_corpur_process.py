@@ -26,11 +26,12 @@ import  pandas as pd
 if __name__ == '__main__':
 
     #df = pd.read_csv('F:\\聊天机器人\\Q-A-matching\\data\\touzi_zhidao\\touzizhidao_filter.csv')
-    df = pd.read_csv('F:\\聊天机器人\\Q-A-matching\\data\\baoxian_zhidao\\baoxianzhidao_filter.csv')
+    # df = pd.read_csv('F:\\聊天机器人\\Q-A-matching\\data\\baoxian_zhidao\\baoxianzhidao_filter.csv')
+    df = pd.read_csv('F:\\聊天机器人\\Q-A-matching\\data\\touzi_zhidao\\touzizhidao_filter.csv')#
     print(  len(df)    )
     print(  df.columns )
     print( df.head(5)  )
-    process('F:\\聊天机器人\\baoxian_gpt2.csv',df)
+    process('F:\\聊天机器人\\touzi.csv',df)
     exit()
     
   
