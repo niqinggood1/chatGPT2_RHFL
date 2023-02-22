@@ -74,6 +74,7 @@ def ppo_sentiment_train(config,prompts):
     sentiment_pipe = pipeline('sentiment-analysis', model=senti_model, tokenizer=senti_tokenizer, device=pipe_device)
 
     # 文本生成模型
+
     gpt2_model = GPT2HeadWithValueModel.from_pretrained(config['model_name'])
     gpt2_model_ref = GPT2HeadWithValueModel.from_pretrained(config['model_name'])
     gpt2_tokenizer = AutoTokenizer.from_pretrained(config['model_name'])
