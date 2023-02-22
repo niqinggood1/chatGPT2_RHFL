@@ -127,13 +127,13 @@ def main():
     print('开始和chatbot聊天，输入CTRL + Z以退出')
 
     text = "你好,我是GPT2机器人，May I HELP YOU   "
-    print("【<*_*>】):" + "".join(text))
+    print("【<*_*>】:\t" + "".join(text))
     text_ids = tokenizer.encode(text, add_special_tokens=False)
     history.append(text_ids)
 
     while True:
         try:
-            text = input("user:")
+            text = input("user:**->\t")
             if args.save_samples_path:
                 samples_file.write("user:{}\n".format(text))
             text_ids = tokenizer.encode(text, add_special_tokens=False)
@@ -168,7 +168,7 @@ def main():
                 # print("his_text:{}".format(his_text))
             history.append(response)
             text = tokenizer.convert_ids_to_tokens(response)
-            print("([^_^]):" + "".join(text))
+            print("【<*_*>】:\t" + "".join(text))
             if args.save_samples_path:
                 samples_file.write("chatbot:{}\n".format("".join(text)))
         except KeyboardInterrupt:
