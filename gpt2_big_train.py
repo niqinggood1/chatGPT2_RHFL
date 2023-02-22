@@ -161,8 +161,9 @@ def train_epoch(model, train_dataloader, optimizer, scheduler, logger,
         try:
             input_ids = input_ids.to(device)
             labels = labels.to(device)
-            outputs = model.forward(input_ids, labels=labels)
-            logits = outputs.logits
+            outputs = model(input_ids, labels=labels ) #.forward
+            logits = outputs.logits#last_hidden_state
+
             loss = outputs.loss
             loss = loss.mean()
 
@@ -361,6 +362,7 @@ def calculate_acc(logit, labels, ignore_index=-100):
     return n_correct, n_word
 
 from transformers import AutoTokenizer
+from transformers import GPT2Tokenizer, GPT2Model
 def main():
     # 初始化参数
     args = set_args()
@@ -386,7 +388,8 @@ def main():
 
     # 初始化tokenizer
     # tokenizer = BertTokenizerFast(vocab_file=args.vocab_path, sep_token="[SEP]", pad_token="[PAD]", cls_token="[CLS]")
-    tokenizer   = AutoTokenizer.from_pretrained(args.vocab_path)
+    #tokenizer   = AutoTokenizer.from_pretrained(args.vocab_path)
+    tokenizer = GPT2Tokenizer.from_pretrained(args.vocab_path)
     args.sep_id = tokenizer.sep_token_id
     args.pad_id = tokenizer.pad_token_id
     args.cls_id = tokenizer.cls_token_id
@@ -403,7 +406,7 @@ def main():
         model = GPT2LMHeadModel(config=model_config)
     model = model.to(device)
     logger.info('model config:\n{}'.format(model.config.to_json_string()))
-    assert model.config.vocab_size == tokenizer.vocab_size
+    #assert model.config.vocab_size == tokenizer.vocab_size
 
     # 并行训练模型
     if args.cuda and torch.cuda.device_count() > 1:

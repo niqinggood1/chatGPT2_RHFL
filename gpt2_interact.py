@@ -128,19 +128,23 @@ def main():
 
     text = "你好,我是GPT机器人，May I HELP YOU   "
     print("【<*_*>】: \t" + "".join(text))
+    print('')
     text_ids = tokenizer.encode(text, add_special_tokens=False)
     history.append(text_ids)
 
+    epoch=0
     while True:
         try:
             text = input("USER:").replace(' ','')
+            print('')
             if args.save_samples_path:
                 samples_file.write("user:{}\n".format(text))
             text_ids = tokenizer.encode(text, add_special_tokens=False)
             history.append(text_ids)
             input_ids = [tokenizer.cls_token_id]  # 每个input以[CLS]为开头
 
-            for history_id, history_utr in enumerate(history[-args.max_history_len:]):
+            cut = 1 if epoch==0  else  args.max_history_len
+            for history_id, history_utr in enumerate(history[-cut:]):
                 input_ids.extend(history_utr)
                 input_ids.append(tokenizer.sep_token_id)
             input_ids = torch.tensor(input_ids).long().to(device)
@@ -169,6 +173,8 @@ def main():
             history.append(response)
             text = tokenizer.convert_ids_to_tokens(response)
             print("【<*_*>】:\t" + "".join(text))
+
+            print('______'*10)
             if args.save_samples_path:
                 samples_file.write("chatbot:{}\n".format("".join(text)))
         except KeyboardInterrupt:
