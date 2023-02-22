@@ -76,7 +76,7 @@ class GPT2HeadWithValueModel(GPT2PreTrainedModel):
     def __init__(self, config,if_GPT2LMHeadModel=True):
         super().__init__(config)
         config.num_labels = 1
-        self.transformer = GPT2Model(config) if if_GPT2LMHeadModel else GPT2LMHeadModel.from_pretrained(config)
+        self.transformer = GPT2Model(config) if not if_GPT2LMHeadModel else GPT2LMHeadModel.from_pretrained(config)
         self.lm_head = nn.Linear(config.n_embd, config.vocab_size, bias=False)
         self.v_head = ValueHead(config)
         self.init_weights()

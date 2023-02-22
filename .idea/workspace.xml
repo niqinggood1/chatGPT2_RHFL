@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93a72af7-911e-4761-a676-8271735d1568" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ppo_sentiment_train.py" beforeDir="false" afterPath="$PROJECT_DIR$/ppo_sentiment_train.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trl/gpt2.py" beforeDir="false" afterPath="$PROJECT_DIR$/trl/gpt2.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,8 +44,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/trl/gpt2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="77" column="29" selection-start-line="77" selection-start-column="29" selection-end-line="77" selection-end-column="29" />
+            <state relative-caret-position="293">
+              <caret line="78" column="52" selection-start-line="78" selection-start-column="52" selection-end-line="78" selection-end-column="52" />
               <folding>
                 <element signature="e#224#311#0" expanded="true" />
               </folding>
@@ -87,8 +85,8 @@
       <find>max_history_len</find>
       <find>cuda</find>
       <find>gpt2_tokenizer</find>
-      <find>model</find>
       <find>GPT2Model</find>
+      <find>model</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -187,12 +185,12 @@
       <option name="presentableId" value="Default" />
       <updated>1677045371383</updated>
       <workItem from="1677045373156" duration="9295000" />
-      <workItem from="1677076656548" duration="1146000" />
+      <workItem from="1677076656548" duration="1520000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10441000" />
+    <option name="totallyTimeSpent" value="10815000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
@@ -233,6 +231,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://D:/Python38/Lib/site-packages/transformers/utils/dummy_pt_objects.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="1273" column="8" selection-start-line="1273" selection-start-column="8" selection-end-line="1273" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test_dialogpt2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
@@ -240,13 +245,6 @@
           <folding>
             <element signature="e#173#192#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Python38/Lib/site-packages/transformers/utils/dummy_pt_objects.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="1273" column="8" selection-start-line="1273" selection-start-column="8" selection-end-line="1273" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -263,8 +261,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/trl/gpt2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="77" column="29" selection-start-line="77" selection-start-column="29" selection-end-line="77" selection-end-column="29" />
+        <state relative-caret-position="293">
+          <caret line="78" column="52" selection-start-line="78" selection-start-column="52" selection-end-line="78" selection-end-column="52" />
           <folding>
             <element signature="e#224#311#0" expanded="true" />
           </folding>
