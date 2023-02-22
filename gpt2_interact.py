@@ -128,8 +128,12 @@ def main():
 
     while True:
         try:
+            text = "你好,我是GPT2机器人，May I HELP YOU   "
+            print("([^_^]):" + "".join(text))
+            text_ids = tokenizer.encode(text, add_special_tokens=False)
+            history.append(text_ids)
+
             text = input("user:")
-            text = "你好,我时你的专属机器人  [^_^] "
             if args.save_samples_path:
                 samples_file.write("user:{}\n".format(text))
             text_ids = tokenizer.encode(text, add_special_tokens=False)

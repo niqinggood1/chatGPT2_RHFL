@@ -97,8 +97,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gpt2_interact.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="31">
-              <caret line="131" column="39" selection-start-line="131" selection-start-column="39" selection-end-line="131" selection-end-column="39" />
+            <state relative-caret-position="156">
+              <caret line="133" column="19" selection-start-line="133" selection-start-column="12" selection-end-line="133" selection-end-column="19" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -281,12 +281,12 @@
       <option name="presentableId" value="Default" />
       <updated>1677045371383</updated>
       <workItem from="1677045373156" duration="9295000" />
-      <workItem from="1677076656548" duration="14969000" />
+      <workItem from="1677076656548" duration="15422000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24264000" />
+    <option name="totallyTimeSpent" value="24717000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
@@ -400,8 +400,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gpt2_interact.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="131" column="39" selection-start-line="131" selection-start-column="39" selection-end-line="131" selection-end-column="39" />
+        <state relative-caret-position="156">
+          <caret line="133" column="19" selection-start-line="133" selection-start-column="12" selection-end-line="133" selection-end-column="19" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
