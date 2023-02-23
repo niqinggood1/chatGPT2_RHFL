@@ -363,6 +363,7 @@ def calculate_acc(logit, labels, ignore_index=-100):
 
 from transformers import AutoTokenizer
 from transformers import GPT2Tokenizer, GPT2Model
+from transformers import BertTokenizer
 def main():
     # 初始化参数
     args = set_args()
@@ -389,7 +390,7 @@ def main():
     # 初始化tokenizer
     # tokenizer = BertTokenizerFast(vocab_file=args.vocab_path, sep_token="[SEP]", pad_token="[PAD]", cls_token="[CLS]")
     #tokenizer   = AutoTokenizer.from_pretrained(args.vocab_path)
-    tokenizer = GPT2Tokenizer.from_pretrained(args.vocab_path)
+    tokenizer = BertTokenizer.from_pretrained(args.vocab_path) #GPT2Tokenizer
     args.sep_id = tokenizer.sep_token_id
     args.pad_id = tokenizer.pad_token_id
     args.cls_id = tokenizer.cls_token_id
