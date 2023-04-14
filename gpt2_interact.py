@@ -103,7 +103,7 @@ def top_k_top_p_filtering(logits, top_k=0, top_p=0.0, filter_value=-float('Inf')
         logits[indices_to_remove] = filter_value
     return logits
 
-
+from transformers import GPT2Tokenizer, GPT2Model,AutoTokenizer
 def main():
     args = set_args()
     logger = create_logger(args)
@@ -112,8 +112,9 @@ def main():
     device = 'cuda' if args.cuda else 'cpu'
     logger.info('using device:{}'.format(device))
     os.environ["CUDA_VISIBLE_DEVICES"] = args.device
-    tokenizer = BertTokenizerFast(vocab_file=args.vocab_path, sep_token="[SEP]", pad_token="[PAD]", cls_token="[CLS]")
-    # tokenizer = BertTokenizer(vocab_file=args.voca_path)
+    #tokenizer = BertTokenizerFast(vocab_file=args.vocab_path, sep_token="[SEP]", pad_token="[PAD]", cls_token="[CLS]")
+    tokenizer = AutoTokenizer.from_pretrained(args.vocab_path, sep_token="[SEP]", pad_token="[PAD]", cls_token="[CLS]")
+    # tokenizer = GPT2Tokenizer.from_pretrained(args.vocab_path)
     model = GPT2LMHeadModel.from_pretrained(args.model_path)
     model = model.to(device)
     model.eval()

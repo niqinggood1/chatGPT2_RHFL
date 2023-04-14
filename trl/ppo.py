@@ -129,8 +129,8 @@ class PPOTrainer:
             train_stats (dict): a summary of the training statistics
         """
 
-        bs = self.ppo_params['batch_size']
-        assert bs == len(queries), f"Batch size ({bs}) does not match number of examples ({len(queries)})"
+        bs = self.ppo_params['batch_size']  #len(queries)#
+        #assert bs == len(queries), f"Batch size ({bs}) does not match number of examples ({len(queries)})"
 
         timing = dict()
         t0 = time.time()
@@ -141,14 +141,18 @@ class PPOTrainer:
         logprobs, ref_logprobs, values = self.batched_forward_pass(queries, responses)  # 拿到模型生成的tokens的log_prob、token_value
         timing['time/ppo/forward_pass'] = time.time()-t
 
+        print('scores',len(scores) )
         t = time.time()
         rewards, non_score_reward = self.compute_rewards(scores, logprobs, ref_logprobs) # 计算discount reward
         timing['time/ppo/compute_rewards'] = time.time()-t
 
+        print('rewards',len(rewards),'non_score_reward', len(non_score_reward))
+
         t = time.time()
         all_stats = []
-        idxs = list(range(bs))
+        idxs = list(range(bs)) ;  print('ppo train epochs:',self.ppo_params['ppo_epochs'] )
         for _ in range(self.ppo_params['ppo_epochs']):
+
             random.shuffle(idxs)
             for i in range(bs):
                 idx = idxs[i]
@@ -181,15 +185,17 @@ class PPOTrainer:
 
     def batched_forward_pass(self, queries, responses):
         """Calculate model outputs in multiple batches."""
-        bs = self.ppo_params['batch_size']
+        bs = self.ppo_params['batch_size'] #len(queries)   #
         fbs = self.ppo_params['forward_batch_size']
         all_logprobs = []
         all_ref_logprobs = []
         all_values = []
-
+        print('queries len',len(queries))
         for i in range(int(bs/fbs)):
+            print('in batched_forward_pass train:', i )
             query_batch = queries[i*fbs:(i+1)*fbs]
             response_batch = responses[i*fbs:(i+1)*fbs]
+            print('query_batch len',len(query_batch)  )
             input_ids = self.data_collator([torch.cat([q, r]) for q, r in zip(query_batch, response_batch)])["input_ids"]
             with torch.no_grad():
                 logits, _, v = self.model(input_ids)                                    # logits -> (batch, max_output_len, vocab_size); v -> (batch, max_ouput_len)
@@ -202,6 +208,9 @@ class PPOTrainer:
                 all_values.append(v[j, start-1:end-1])                                  # 生成的tokens的value
                 all_logprobs.append(logprobs[j, start:end])                             # 生成的tokens的概率
                 all_ref_logprobs.append(ref_logprobs[j, start:end])                     # ref model生成的tokens的概率
+        print(  'all_logprobs shape', len(all_logprobs) )
+        print(  'all_ref_logprobs shape', len(all_ref_logprobs))
+        print(  'all_values', len(all_values))
         return all_logprobs, all_ref_logprobs, all_values
 
     def train_minibatch(self, logprobs, values, rewards, query, response, model_input):

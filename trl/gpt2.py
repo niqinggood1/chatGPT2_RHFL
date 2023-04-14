@@ -41,7 +41,7 @@ class ValueHead(nn.Module):
                 num_classes = config.num_labels
             else:
                 num_classes = config.hidden_size
-            self.summary = nn.Linear(config.hidden_size, num_classes)
+            self.summary = nn.Linear(config.vocab_size, num_classes)
 
         self.activation = Identity()
         if hasattr(config, "summary_activation") and config.summary_activation == "tanh":
@@ -73,16 +73,20 @@ class ValueHead(nn.Module):
 # Cell
 class GPT2HeadWithValueModel(GPT2PreTrainedModel):
     """The GPT2HeadWithValueModel class implements a GPT2 language model with a secondary, scalar head."""
-    def __init__(self, config,if_GPT2LMHeadModel=False):
+    def __init__(self, config,if_GPT2LMHeadModel=True):
         super().__init__(config)
         config.num_labels = 1
-        self.transformer = GPT2Model(config) if not if_GPT2LMHeadModel else GPT2LMHeadModel(config)
-        self.lm_head = nn.Linear(config.n_embd, config.vocab_size, bias=False)
+        print('config:',config)
+        self.transformer = GPT2LMHeadModel(config) if  if_GPT2LMHeadModel else  GPT2Model(config)
+        # self.lm_head = nn.Linear(config.vocab_size, config.vocab_size, bias=False)#config.n_embd, config.vocab_size, bias=False
         self.v_head = ValueHead(config)
         self.init_weights()
 
-    def get_output_embeddings(self):
-        return self.lm_head
+    # def from_pretrained(self,model_path):
+    #     self.transformer = GPT2LMHeadModel.from_pretrained( model_path)
+
+    # def get_output_embeddings(self):
+    #     return self.lm_head
 
     def detach_value_head(self):
         self.v_head.detach_head = True
@@ -115,10 +119,11 @@ class GPT2HeadWithValueModel(GPT2PreTrainedModel):
             inputs_embeds=inputs_embeds,
             use_cache=use_cache,
         )
-        hidden_states = transformer_outputs[0]               # (batch, seq_len, 768)
-        print( 'hidden_states shape:',hidden_states.shape )
-        lm_logits = self.lm_head(hidden_states)              # (batch, seq_len, vocab_size)
-        value = self.v_head(hidden_states).squeeze(-1)       # (batch, seq_len)
+        #hidden_states = transformer_outputs[0]               # (batch, seq_len, 768)
+        lm_logits = transformer_outputs[0]
+        #print( 'hidden_states shape:',hidden_states.shape )
+        #lm_logits = self.lm_head(hidden_states)              # (batch, seq_len, vocab_size)
+        value = self.v_head(lm_logits).squeeze(-1)       # (batch, seq_len)
         
         if not return_dict:
             outputs = (lm_logits, loss, value,)

@@ -91,7 +91,7 @@ def create_logger(args):
 
 def collate_fn(batch):
     input_ids = rnn_utils.pad_sequence(batch, batch_first=True, padding_value=0)
-    labels = rnn_utils.pad_sequence(batch, batch_first=True, padding_value=-100)
+    labels    = rnn_utils.pad_sequence(batch, batch_first=True, padding_value=-100)
     return input_ids, labels
 
 
@@ -114,7 +114,7 @@ def collate_fn(batch):
 #         new_data_list.append(new_data)
 #     return new_data_list
 
-
+import random
 def load_dataset(logger, args):
     """
     加载训练集和验证集
@@ -125,19 +125,24 @@ def load_dataset(logger, args):
     with open(train_path, "rb") as f:
         input_list = pickle.load(f)
 
+    #shuffle
+    seed    =  random.random()
+    random.seed()
+    random.shuffle( input_list )
+
     # 划分训练集与验证集
     val_num = args.val_num
     data_len=  len( input_list )
     print('data len', data_len)
-    train_len = int(0.8 * data_len)
+    train_len = int(0.2 * data_len)
     input_list_train = input_list[:train_len ]
-    input_list_val = input_list[train_len:]
+    input_list_val = input_list[train_len:train_len+1000]
     # test
     # input_list_train = input_list_train[:24]
     # input_list_val = input_list_val[:24]
 
-    train_dataset = MyDataset(input_list_train, args.max_len)
-    val_dataset = MyDataset(input_list_val, args.max_len)
+    train_dataset   = MyDataset(input_list_train, args.max_len)
+    val_dataset     = MyDataset(input_list_val, args.max_len)
 
     return train_dataset, val_dataset
 
@@ -158,11 +163,12 @@ def train_epoch(model, train_dataloader, optimizer, scheduler, logger,
 
     for batch_idx, (input_ids, labels) in enumerate(train_dataloader):
         # 捕获cuda out of memory exception
+        print( 'batch_idx',input_ids,labels )
         try:
-            input_ids = input_ids.to(device)
-            labels = labels.to(device)
-            outputs = model(input_ids, labels=labels ) #.forward
-            logits = outputs.logits#last_hidden_state
+            input_ids   = input_ids.to(device)
+            labels      = labels.to(device)
+            outputs     = model(input_ids, labels=labels ) #.forward
+            logits      = outputs.logits#last_hidden_state
 
             loss = outputs.loss
             loss = loss.mean()
@@ -217,11 +223,11 @@ def train_epoch(model, train_dataloader, optimizer, scheduler, logger,
     # save model
     logger.info('saving model for epoch {}'.format(epoch + 1))
     model_path = join(args.save_model_path, 'epoch{}'.format(epoch + 1))
-    if epoch%50 ==0:
-        if not os.path.exists(model_path):
-            os.mkdir(model_path)
-        model_to_save = model.module if hasattr(model, 'module') else model
-        model_to_save.save_pretrained(model_path)
+
+    if not os.path.exists(model_path):
+        os.mkdir(model_path)
+    model_to_save = model.module if hasattr(model, 'module') else model
+    model_to_save.save_pretrained(model_path)
     logger.info('epoch {} finished'.format(epoch + 1))
     epoch_finish_time = datetime.now()
     logger.info('time for one epoch: {}'.format(epoch_finish_time - epoch_start_time))
@@ -283,7 +289,6 @@ def train(model, logger, train_dataset, validate_dataset, args):
     scheduler = transformers.get_linear_schedule_with_warmup(
         optimizer, num_warmup_steps=args.warmup_steps, num_training_steps=t_total
     )
-
     logger.info('starting training')
 
     # 用于记录每个epoch训练和验证的loss
@@ -305,7 +310,7 @@ def train(model, logger, train_dataset, validate_dataset, args):
             logger=logger, epoch=epoch, args=args)
         validate_losses.append(validate_loss)
 
-        # 保存当前困惑度最低的模型，困惑度低，模型的生成效果不一定会越好
+        # 保存当前困惑度最低的模型，困惑度低，模型的生成效果不一定会越好 min_ppl_model
         if (validate_loss < best_val_loss) or epoch >1000:
             best_val_loss = validate_loss
             logger.info('saving current best model for epoch {}'.format(epoch + 1))
@@ -389,11 +394,11 @@ def main():
 
     # 初始化tokenizer
     # tokenizer = BertTokenizerFast(vocab_file=args.vocab_path, sep_token="[SEP]", pad_token="[PAD]", cls_token="[CLS]")
-    #tokenizer   = AutoTokenizer.from_pretrained(args.vocab_path)
-    tokenizer = BertTokenizer.from_pretrained(args.vocab_path) #GPT2Tokenizer
-    args.sep_id = tokenizer.sep_token_id
-    args.pad_id = tokenizer.pad_token_id
-    args.cls_id = tokenizer.cls_token_id
+    tokenizer   = AutoTokenizer.from_pretrained(args.vocab_path, sep_token="[SEP]", pad_token="[PAD]", cls_token="[CLS]")
+    #tokenizer = GPT2Tokenizer.from_pretrained(args.vocab_path, sep_token="[SEP]", pad_token="[PAD]", cls_token="[CLS]") #GPT2Tokenizer
+    # args.sep_id = tokenizer.sep_token_id
+    # args.pad_id = tokenizer.pad_token_id
+    # args.cls_id = tokenizer.cls_token_id
 
     # 创建模型的输出目录
     if not os.path.exists(args.save_model_path):

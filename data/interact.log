@@ -30,3 +30,4 @@
 2023-02-22 15:52:29,288 - INFO - using device:cpu
 2023-02-22 15:53:30,749 - INFO - using device:cpu
 2023-02-22 15:54:21,914 - INFO - using device:cpu
+2023-02-24 21:30:51,114 - INFO - using device:cuda

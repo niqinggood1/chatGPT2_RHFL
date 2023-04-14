@@ -36,7 +36,8 @@ def create_logger(log_path):
 
     return logger
 
-
+from transformers import GPT2Tokenizer,GPT2LMHeadModel
+from transformers import AutoTokenizer
 def preprocess():
     """
     对原始语料进行tokenize，将每段对话处理成如下形式："[CLS]utterance1[SEP]utterance2[SEP]utterance3[SEP]"
@@ -53,7 +54,8 @@ def preprocess():
     logger = create_logger(args.log_path)
 
     # 初始化tokenizer
-    tokenizer = BertTokenizerFast(vocab_file=args.vocab_path, sep_token="[SEP]", pad_token="[PAD]", cls_token="[CLS]")
+    #tokenizer = GPT2Tokenizer.from_pretrained(args.vocab_path, sep_token="[SEP]", pad_token="[PAD]", cls_token="[CLS]")
+    tokenizer = AutoTokenizer.from_pretrained(args.vocab_path, sep_token="[SEP]", pad_token="[PAD]", cls_token="[CLS]")
     sep_id = tokenizer.sep_token_id
     cls_id = tokenizer.cls_token_id
     logger.info("preprocessing data,data path:{}, save path:{}".format(args.train_path, args.save_path))
