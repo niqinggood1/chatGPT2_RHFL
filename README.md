@@ -20,7 +20,7 @@ python interact.py --model_path model/epoch1001  --device 0 (指定0号GPU进行
 运行train.py,使用预处理后的数据，对模型进行自回归训练，模型保存在根目录下的model文件夹中
 python train.py --epochs 40 --batch_size 8 --device 0,1 --train_path data/train.pkl
 
-### 数据编码
+### 训练数据编码
 python gpt2_data_preprocess.py --vocab_path gpt2-chinese-cluecorpussmall --train_path data/big_common.txt --save_path data/cluecorpus_common.pkl
 
 
