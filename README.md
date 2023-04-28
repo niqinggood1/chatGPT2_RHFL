@@ -1,6 +1,4 @@
-# gpt2_chat
-
-## 使用方法
+# gpt2_chat使用方法 
 
 ### 预处理数据
 先要将数据转为一行一位发言者的数据形式  
@@ -9,9 +7,9 @@
 ### 训练数据编码  
   运行preprocess.py，对data/train.txt对话语料进行tokenize，然后进行序列化保存到data/train.pkl。train.pkl中序列化的对象的类型为List[List],记录对话列表中,每个对话包含的token。  
   
-####GPT2 medium 
+#### GPT2 medium  
   python3 gpt2_data_preprocess.py --vocab_path Wenzhong2.0-GPT2-3.5B-chinese --train_path data/vhs_medical.txt --save_path data/vhs_medical.pkl
-####GPT2 small   
+#### GPT2 small  
   python gpt2_data_preprocess.py --vocab_path gpt2-chinese-cluecorpussmall --train_path data/big_common.txt --save_path data/cluecorpus_common.pkl
 
 
