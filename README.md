@@ -19,8 +19,7 @@
 python gpt2_big_train.py --pretrained_model smallmodel/min_ppl_model  --vocab_path gpt2-chinese-cluecorpussmall --save_model_path smallmodel --epochs 10 --batch_size 60 --device 0,1 --train_path data/cluecorpus_common.pkl --lr 0.000052 --warmup_steps 400
 
 ###  模型交互
-执行如下命令，进行对话
+#### 执行如下命令，进行对话  
 python gpt2_big_interact.py --no_cuda --model_path model/epoch1001  (使用cpu生成，速度相对较慢)
-或
+#### 或  
 python3 gpt2_big_interact.py --model_path gpt2_medium/epoch3 --device 0 --vocab_path Wenzhong2.0-GPT2-3.5B-chinese --max_len 200 (指定0号GPU进行生成，速度相对较快)
-
