@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93a72af7-911e-4761-a676-8271735d1568" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/config(1).json" beforeDir="false" afterPath="$PROJECT_DIR$/model/config(1).json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/model/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trl/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/trl/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trl/core.py" beforeDir="false" afterPath="$PROJECT_DIR$/trl/core.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trl/gpt2.py" beforeDir="false" afterPath="$PROJECT_DIR$/trl/gpt2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trl/ppo.py" beforeDir="false" afterPath="$PROJECT_DIR$/trl/ppo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/t5_interact.py" beforeDir="false" afterPath="$PROJECT_DIR$/t5_interact.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,8 +22,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/t5_interact.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="34" column="59" selection-start-line="34" selection-start-column="59" selection-end-line="34" selection-end-column="59" />
+            <state relative-caret-position="223">
+              <caret line="49" column="67" selection-start-line="49" selection-start-column="67" selection-end-line="49" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -318,12 +311,12 @@
       <workItem from="1683185807161" duration="583000" />
       <workItem from="1683188829845" duration="2720000" />
       <workItem from="1683277972658" duration="2060000" />
-      <workItem from="1683343540600" duration="5786000" />
+      <workItem from="1683343540600" duration="5984000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="226499000" />
+    <option name="totallyTimeSpent" value="226697000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
@@ -585,8 +578,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/t5_interact.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="34" column="59" selection-start-line="34" selection-start-column="59" selection-end-line="34" selection-end-column="59" />
+        <state relative-caret-position="223">
+          <caret line="49" column="67" selection-start-line="49" selection-start-column="67" selection-end-line="49" selection-end-column="67" />
         </state>
       </provider>
     </entry>

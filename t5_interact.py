@@ -29,7 +29,7 @@ def set_args():
     #                     help='模型参数')
     parser.add_argument('--log_path', default='data/interact.log', type=str, required=False, help='interact日志存放位置')
     parser.add_argument('--vocab_path', default='vocab/vocab.txt', type=str, required=False, help='选择词库')
-    parser.add_argument('--model_path', default='model/epoch40', type=str, required=False, help='对话模型路径')
+    parser.add_argument('--model_path', default='Chinese_Chat_T5_Base', type=str, required=False, help='对话模型路径')
     parser.add_argument('--save_samples_path', default="sample/", type=str, required=False, help="保存聊天记录的文件路径")
     parser.add_argument('--repetition_penalty', default=1.005, type=float, required=False,
                         help="重复惩罚参数，若生成的对话重复性较高，可适当提高该参数")
@@ -46,8 +46,8 @@ def interact(  args ):
     import torch
     from torch import cuda
     from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
-    tokenizer = AutoTokenizer.from_pretrained(      "mxmax/Chinese_Chat_T5_Base")
-    model = AutoModelForSeq2SeqLM.from_pretrained(  "mxmax/Chinese_Chat_T5_Base")
+    tokenizer = AutoTokenizer.from_pretrained(    args.model_path   )
+    model = AutoModelForSeq2SeqLM.from_pretrained( args.model_path )
     device = 'cuda' if cuda.is_available() else 'cpu'
     model.to(device)
 
