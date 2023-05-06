@@ -101,7 +101,7 @@ def top_k_top_p_filtering(logits, top_k=0, top_p=0.0, filter_value=-float('Inf')
         logits[indices_to_remove] = filter_value
     return logits
 
-from transformers import GPT2Tokenizer, GPT2Model
+from transformers import GPT2Tokenizer, GPT2Model,AutoTokenizer
 def main():
     args = set_args()
     logger = create_logger(args)
@@ -112,7 +112,7 @@ def main():
     os.environ["CUDA_VISIBLE_DEVICES"] = args.device
 
     #tokenizer = GPT2Tokenizer.from_pretrained(args.model_path, sep_token="[SEP]", pad_token="[PAD]", cls_token="[CLS]")
-    tokenizer = GPT2Tokenizer.from_pretrained(args.vocab_path, sep_token="[SEP]", pad_token="[PAD]", cls_token="[CLS]")
+    tokenizer = AutoTokenizer.from_pretrained(args.vocab_path, sep_token="[SEP]", pad_token="[PAD]", cls_token="[CLS]")
     model = GPT2LMHeadModel.from_pretrained(args.model_path)
     model = model.to(device)
     model.eval()
@@ -176,6 +176,7 @@ def main():
             print('response:',response)
             text = tokenizer.decode(response)
             #text = tokenizer.decode(response).split('<|endoftext|>')[0]
+            print('box_text:',text)
             print("【<*_*>】:\t" + "".join(text))
 
             print('______'*10)

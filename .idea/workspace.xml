@@ -2,20 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93a72af7-911e-4761-a676-8271735d1568" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/flask_gpt_chatbot.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gpt2_big_interact.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zero_train.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/interact.log" beforeDir="false" afterPath="$PROJECT_DIR$/data/interact.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gpt2_big_train.py" beforeDir="false" afterPath="$PROJECT_DIR$/gpt2_big_train.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gpt2_data_preprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/gpt2_data_preprocess.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gpt2_interact.py" beforeDir="false" afterPath="$PROJECT_DIR$/gpt2_interact.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/newdf.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/newdf1.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ppo_sentiment_train.py" beforeDir="false" afterPath="$PROJECT_DIR$/ppo_sentiment_train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gpt2_big_interact.py" beforeDir="false" afterPath="$PROJECT_DIR$/gpt2_big_interact.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gpt2_big_zhouwenwang.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gpt2_interact.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gpt2_train.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/raw_corpur_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/raw_corpur_process.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trl/gpt2.py" beforeDir="false" afterPath="$PROJECT_DIR$/trl/gpt2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trl/ppo.py" beforeDir="false" afterPath="$PROJECT_DIR$/trl/ppo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_dialogpt2.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +18,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/dialogGPT2_RHFL$webui.coverage" NAME="webui Coverage Results" MODIFIED="1677135851158" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/dialogGPT2_RHFL$raw_corpur_process.coverage" NAME="raw_corpur_process Coverage Results" MODIFIED="1677695753997" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/dialogGPT2_RHFL$raw_corpur_process.coverage" NAME="raw_corpur_process Coverage Results" MODIFIED="1682650607364" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/dialogGPT2_RHFL$test_dialogpt2.coverage" NAME="test_dialogpt2 Coverage Results" MODIFIED="1677052457210" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/dialogGPT2_RHFL$test1.coverage" NAME="test1 Coverage Results" MODIFIED="1678602475598" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/dialogGPT2_RHFL$flask_gpt_chatbot.coverage" NAME="flask_gpt_chatbot Coverage Results" MODIFIED="1677245386573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -33,79 +26,46 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gpt2_big_train.py">
+        <entry file="file://$PROJECT_DIR$/gpt2_big_interact.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="43">
-              <caret line="280" column="22" lean-forward="true" selection-start-line="280" selection-start-column="22" selection-end-line="280" selection-end-column="22" />
+            <state relative-caret-position="68">
+              <caret line="32" selection-start-line="32" selection-end-line="34" selection-end-column="87" />
               <folding>
-                <element signature="e#0#15#0" expanded="true" />
+                <element signature="e#0#19#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dataset.py">
+        <entry file="file://$PROJECT_DIR$/t5_interact.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="16" column="24" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="24" />
+            <state relative-caret-position="125">
+              <caret line="89" selection-start-line="89" selection-end-line="93" selection-end-column="10" />
+              <folding>
+                <element signature="e#166#185#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/raw_corpur_process.py">
+        <entry file="file://$PROJECT_DIR$/gpt2_big_train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="74" column="10" selection-start-line="74" selection-start-column="8" selection-end-line="74" selection-end-column="10" />
+            <state>
+              <caret selection-end-column="15" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gpt2_data_preprocess.py">
+        <entry file="file://$PROJECT_DIR$/t5_train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="57" column="13" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="13" />
-              <folding>
-                <element signature="e#0#45#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gpt2_big_zhouwenwang.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="125" column="27" selection-start-line="125" selection-start-column="21" selection-end-line="125" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/flask_gpt_chatbot.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2025">
-              <caret line="82" column="4" selection-start-line="82" selection-start-column="4" selection-end-line="82" selection-end-column="16" />
-              <folding>
-                <element signature="e#173#214#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gpt2_big_interact.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2275">
-              <caret line="111" column="51" selection-start-line="111" selection-start-column="51" selection-end-line="111" selection-end-column="51" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="219">
+              <caret line="457" column="52" selection-start-line="457" selection-start-column="32" selection-end-line="457" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -121,17 +81,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>model_path</find>
-      <find>n_embd</find>
-      <find>pretrained_model</find>
-      <find>loss</find>
-      <find>lm_head</find>
-      <find>model_pa</find>
-      <find>After train</find>
-      <find>config</find>
-      <find>check:</find>
-      <find>gen_kwargs</find>
-      <find>ppo_trainer</find>
       <find>query_batch</find>
       <find>query_batch len</find>
       <find>saving model for epoch</find>
@@ -148,9 +97,20 @@
       <find>model</find>
       <find>train_epoch</find>
       <find>train_dataset</find>
-      <find>train_dataloader</find>
       <find>law</find>
       <find>collate_fn</find>
+      <find>train_dataloader</find>
+      <find>--max_history_len</find>
+      <find>max_history_len</find>
+      <find>epoch</find>
+      <find>GPT2Model</find>
+      <find>AutoTokenizer</find>
+      <find>GPT2LMHeadModel</find>
+      <find>vocab_path</find>
+      <find>process_novel_data</find>
+      <find>args</find>
+      <find>set_args</find>
+      <find>argparse</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -165,25 +125,28 @@
         <option value="$PROJECT_DIR$/gpt2_big_zhouwenwang.py" />
         <option value="$PROJECT_DIR$/webui.py" />
         <option value="$PROJECT_DIR$/test2.py" />
-        <option value="$PROJECT_DIR$/gpt2_big_interact.py" />
         <option value="$PROJECT_DIR$/gpt2_data_preprocess.py" />
         <option value="$PROJECT_DIR$/gpt2_interact.py" />
         <option value="$PROJECT_DIR$/trl/ppo.py" />
         <option value="$PROJECT_DIR$/trl/gpt2.py" />
-        <option value="$PROJECT_DIR$/raw_corpur_process.py" />
         <option value="$PROJECT_DIR$/flask_gpt_chatbot.py" />
         <option value="$PROJECT_DIR$/ppo_sentiment_train.py" />
         <option value="$PROJECT_DIR$/zero_train.py" />
         <option value="$PROJECT_DIR$/test1.py" />
         <option value="$PROJECT_DIR$/gpt2_big_train.py" />
+        <option value="$PROJECT_DIR$/raw_corpur_process.py" />
+        <option value="$PROJECT_DIR$/gpt2_big_interact.py" />
+        <option value="$PROJECT_DIR$/chat_t5.py" />
+        <option value="$PROJECT_DIR$/t5_interact.py" />
+        <option value="$PROJECT_DIR$/t5_train.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="232" />
+    <option name="y" value="142" />
     <option name="width" value="1244" />
-    <option name="height" value="456" />
+    <option name="height" value="560" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -209,7 +172,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test_deepspeed" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -231,7 +194,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test1">
+  <component name="RunManager" selected="Python.raw_corpur_process">
     <configuration name="flask_gpt_chatbot" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="dialogGPT2_RHFL" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -344,8 +307,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test1" />
         <item itemvalue="Python.raw_corpur_process" />
+        <item itemvalue="Python.test1" />
         <item itemvalue="Python.flask_gpt_chatbot" />
         <item itemvalue="Python.webui" />
         <item itemvalue="Python.test_dialogpt2" />
@@ -379,23 +342,34 @@
       <workItem from="1680856592057" duration="1664000" />
       <workItem from="1681357144419" duration="753000" />
       <workItem from="1681362543652" duration="4866000" />
-      <workItem from="1681437338554" duration="4099000" />
+      <workItem from="1681437338554" duration="7924000" />
+      <workItem from="1681873331863" duration="4109000" />
+      <workItem from="1682042245724" duration="1461000" />
+      <workItem from="1682216986702" duration="2385000" />
+      <workItem from="1682357352550" duration="3424000" />
+      <workItem from="1682582512558" duration="8807000" />
+      <workItem from="1682650290293" duration="3072000" />
+      <workItem from="1682939874293" duration="647000" />
+      <workItem from="1683185807161" duration="583000" />
+      <workItem from="1683188829845" duration="2720000" />
+      <workItem from="1683277972658" duration="2060000" />
+      <workItem from="1683343540600" duration="4634000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="187620000" />
+    <option name="totallyTimeSpent" value="225347000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1376" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.668942" visible="true" weight="0.16489361" />
-      <window_info id="Structure" order="1" sideWeight="0.33105803" side_tool="true" visible="true" weight="0.16489361" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.75085324" visible="true" weight="0.20212767" />
+      <window_info id="Structure" order="1" sideWeight="0.24914676" side_tool="true" visible="true" weight="0.20212767" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26962456" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.21672355" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -418,27 +392,9 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/interact.py" />
-    <entry file="file://D:/Python38/Lib/site-packages/transformers/generation_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28925">
-          <caret line="1178" selection-start-line="1178" selection-end-line="1178" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Python38/Lib/site-packages/transformers/utils/dummy_pt_objects.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="1286" column="8" selection-start-line="1286" selection-start-column="8" selection-end-line="1286" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Python38/Lib/site-packages/transformers/models/xlnet/modeling_xlnet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="333" column="8" selection-start-line="333" selection-start-column="8" selection-end-line="333" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://D:/Python38/Lib/site-packages/transformers/generation_utils.py" />
+    <entry file="file://D:/Python38/Lib/site-packages/transformers/utils/dummy_pt_objects.py" />
+    <entry file="file://D:/Python38/Lib/site-packages/transformers/models/xlnet/modeling_xlnet.py" />
     <entry file="file://$PROJECT_DIR$/webui.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -497,47 +453,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/Python38/Lib/site-packages/transformers/models/auto/tokenization_auto.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="284" column="8" selection-start-line="284" selection-start-column="8" selection-end-line="284" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Python38/Lib/site-packages/transformers/utils/dummy_tokenizers_objects.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gpt2_interact.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2375">
-          <caret line="117" column="43" selection-start-line="117" selection-start-column="28" selection-end-line="117" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="1" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Python38/Lib/site-packages/transformers/models/gpt2/tokenization_gpt2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="164" column="17" selection-start-line="164" selection-start-column="8" selection-end-line="164" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://D:/Python38/Lib/site-packages/transformers/models/auto/tokenization_auto.py" />
+    <entry file="file://D:/Python38/Lib/site-packages/transformers/utils/dummy_tokenizers_objects.py" />
+    <entry file="file://$PROJECT_DIR$/test2.py" />
+    <entry file="file://D:/Python38/Lib/site-packages/transformers/models/gpt2/tokenization_gpt2.py" />
     <entry file="file://$PROJECT_DIR$/trl/gpt2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1075">
@@ -583,61 +502,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/flask_gpt_chatbot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2025">
-          <caret line="82" column="4" selection-start-line="82" selection-start-column="4" selection-end-line="82" selection-end-column="16" />
-          <folding>
-            <element signature="e#173#214#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gpt2_big_interact.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2275">
-          <caret line="111" column="51" selection-start-line="111" selection-start-column="51" selection-end-line="111" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test1.py" />
     <entry file="file://D:/Python38/Lib/site-packages/torch/utils/data/dataloader.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
           <caret line="153" column="8" selection-start-line="153" selection-start-column="8" selection-end-line="153" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gpt2_big_train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43">
-          <caret line="280" column="22" lean-forward="true" selection-start-line="280" selection-start-column="22" selection-end-line="280" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataset.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="16" column="24" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/raw_corpur_process.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="74" column="10" selection-start-line="74" selection-start-column="8" selection-end-line="74" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -651,16 +520,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gpt2_big_zhouwenwang.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="125" column="27" selection-start-line="125" selection-start-column="21" selection-end-line="125" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/zero_train.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
@@ -668,13 +527,104 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dataset.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="16" column="24" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/raw_corpur_process.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5350">
+          <caret line="214" column="42" selection-start-line="214" selection-start-column="42" selection-end-line="214" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/gpt2_data_preprocess.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="57" column="13" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="13" />
+        <state relative-caret-position="1975">
+          <caret line="89" column="42" selection-start-line="89" selection-start-column="33" selection-end-line="89" selection-end-column="42" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gpt2_big_zhouwenwang.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2500">
+          <caret line="125" column="27" selection-start-line="125" selection-start-column="21" selection-end-line="125" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flask_gpt_chatbot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2025">
+          <caret line="82" column="4" selection-start-line="82" selection-start-column="4" selection-end-line="82" selection-end-column="16" />
+          <folding>
+            <element signature="e#173#214#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gpt2_interact.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1782">
+          <caret line="117" column="43" selection-start-line="117" selection-start-column="28" selection-end-line="117" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat_t5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-19">
+          <caret line="85" column="18" selection-start-line="85" selection-start-column="18" selection-end-line="85" selection-end-column="18" />
+          <folding>
+            <element signature="e#166#185#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gpt2_big_interact.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="32" selection-start-line="32" selection-end-line="34" selection-end-column="87" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gpt2_big_train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="15" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/t5_interact.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="89" selection-start-line="89" selection-end-line="93" selection-end-column="10" />
+          <folding>
+            <element signature="e#166#185#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/t5_train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="457" column="52" selection-start-line="457" selection-start-column="32" selection-end-line="457" selection-end-column="52" />
         </state>
       </provider>
     </entry>
