@@ -8,7 +8,7 @@
 @Date    ：2023/2/23 0:59 
 '''
 
-def process(save_path,df):
+def save_title_reply(save_path,df):
     f = open(save_path, 'w')
     cnt = 0
     df['title'] = df['title'].astype(str).apply(lambda x: x.replace('\r','').replace('\n',';')  )
@@ -16,12 +16,23 @@ def process(save_path,df):
     for index, row in df.iterrows():
         key   = row['title'].strip()
         value = row['reply'].strip()
-
         if key in ['',' ','nan' ] or  value in ['',' ','nan' ]  or  'nan' in key or 'nan' in 'value':
             continue
-
         f.write( str(key).strip().replace(' ', '') + '\n'    )
         f.write( str(value).strip().replace(' ', '') + '\n'  )
+        f.write('\n\n')
+    f.close()
+    return
+
+def save_oneline_data( save_path,df, col='data' ):
+    f = open(save_path, 'w')
+    cnt = 0
+    df[ col ] = df[ col ].astype(str).apply( lambda x: x.replace('\r', '').replace('\n', ';') )
+    for index, row in df.iterrows():
+        key   = row[ col ].strip()
+        if key in ['', ' ', 'nan']:
+            continue
+        f.write(str(key).strip().replace(' ', '') + '\n')
         f.write('\n\n')
     f.close()
 
@@ -90,7 +101,7 @@ def process_common():
         js = json.loads(line)
         tmp_df = pd.json_normalize(js)
         df = df.append(tmp_df)
-    print('df', df.head(10))
+    print('df', df.head(10) )
     df.to_excel('./newdf1.xlsx')
 
     df_list = []
@@ -144,7 +155,7 @@ def process_common():
     # df2 = pd.read_csv('F:\\聊天机器人\\问答知识库\\medical\\train_list.txt', sep='\t', header=None, names=['title', 'reply'])
     # df = df1.append(df)
     # medical_df = df1.append(df)
-    process('F:\\聊天机器人\\medical_df.txt', medical_df)
+    save_title_reply('F:\\聊天机器人\\medical_df.txt', medical_df)
     ############touzi
     touzibaoxian_df = pd.DataFrame()
     for csv in ['F:\\聊天机器人\\Q-A-matching\\data\\touzi_zhidao\\touzizhidao_filter.csv',
@@ -162,7 +173,6 @@ def process_common():
     touzibaoxian_df.to_csv('F:\\聊天机器人\\touzibaoxian_df.csv')
 
     big_common_df = pd.concat( [manual_df, baike_df.sample(frac=0.3),jisuanji_df,law_df, medical_df ,touzibaoxian_df ], axis=0 )
-
     big_common_df['title'] =  big_common_df['title'].astype(str).apply(lambda x: x.replace('\t','').replace('\n','').replace('\r','') )
     big_common_df['reply'] =  big_common_df['reply'].astype(str).apply(lambda x: x.replace('\t','').replace('\n','').replace('\r','') )
     big_common_df.to_csv('F:\\聊天机器人\\big_common.csv')
@@ -171,26 +181,58 @@ def process_common():
     big_common_df           = big_common_df[ big_common_df['remove']!=1 ]
     big_common_df           = big_common_df.dropna(axis=0, how='any')
     big_common_df = big_common_df[(big_common_df['title'] != '') & (big_common_df['reply'] != '')]
-    process('F:\\聊天机器人\\big_common.txt', big_common_df)
-
+    save_title_reply( 'F:\\聊天机器人\\big_common.txt', big_common_df )
     return
 
 
+def process_novel_data():
+    df   = pd.DataFrame( )
+    dirs = [  'F:\\VHS\\恶性肿瘤51_230426','F:\\VHS\\血液病8_230426','F:\VHS\常见病32_230426' ]
+    for dir in dirs:
+        files = os.listdir(dir)
+        print( dir, 'file: ',files )
+        for file in files:
+            print( dir + '\\' + file )
+            encode_key = 'gbk'  #'ANSI' #
+
+            # try:
+            #     open(dir + '\\' +  file, 'r', encoding=encode_key)
+            #     lines = infile.readlines()
+            # except:
+            #     encode_key = 'utf8'
+
+            with open(dir + '\\' +  file, 'r', encoding= encode_key,errors='ignore' ) as infile:
+                lines          = infile.readlines(  )
+                tmp_df         = pd.DataFrame( {'line': lines,'file': file.replace('.txt','')  } )
+                tmp_df['line'] = tmp_df['line'].apply( lambda x : x.replace('\n','').replace('\r','n')  )
+
+                # key             = tmp_df.loc[0]['line']   #lines[0]
+                # tmp_df['file']  = key
+                tmp_df          = tmp_df[ (  tmp_df['line']!='')&(    tmp_df['line']!=' ' )&(    tmp_df['line']!='NaN' ) ]
+                tmp_df['line']  = tmp_df['line'].shift(8) +tmp_df['line'].shift(7) + tmp_df['line'].shift(6) + tmp_df['line'].shift(5)  + '，'+ tmp_df['line'].shift(4) + '，'+ tmp_df['line'].shift(3) + \
+                                  tmp_df['line'].shift(2) + '，' + tmp_df['line'].shift(1) +  '，' + tmp_df['line']
+                tmp_df['line']  = tmp_df['line'].replace(' ','').replace('NaN','')
+                print( tmp_df.head(10)   )
+                df  =  df.append( tmp_df )
+
+    return df
+
+
+
 import  pandas as pd
+import  os
 if __name__ == '__main__':
-    process_common(  )
-    ###########################################心理咨询、尝试
-
-
-    exit()
-
-
-    process('F:\\聊天机器人\\%s.csv' % 'law', tmp_df)
+    # process_common(  )
+    # ###########################################心理咨询、尝试
+    # exit()
+    df  = process_novel_data(   )
+    save_oneline_data( 'F:\\聊天机器人\\vhs_medical.txt',df, col='line' )
+    # process('F:\\聊天机器人\\%s.csv' % 'law', tmp_df)
     exit()
 
     #df = pd.read_csv('F:\\聊天机器人\\Q-A-matching\\data\\touzi_zhidao\\touzizhidao_filter.csv')
 
-    process('F:\\聊天机器人\\%s.csv' % 'medical', df)
+    #process('F:\\聊天机器人\\%s.csv' % 'medical', df)
     exit()
 
     ########################################### touzi  baoxian
