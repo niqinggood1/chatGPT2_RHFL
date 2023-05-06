@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93a72af7-911e-4761-a676-8271735d1568" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gpt2_big_interact.py" beforeDir="false" afterPath="$PROJECT_DIR$/gpt2_big_interact.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gpt2_big_zhouwenwang.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gpt2_interact.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gpt2_train.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/raw_corpur_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/raw_corpur_process.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_dialogpt2.py" beforeDir="false" />
-    </list>
+    <list default="true" id="93a72af7-911e-4761-a676-8271735d1568" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -353,12 +345,12 @@
       <workItem from="1683185807161" duration="583000" />
       <workItem from="1683188829845" duration="2720000" />
       <workItem from="1683277972658" duration="2060000" />
-      <workItem from="1683343540600" duration="4634000" />
+      <workItem from="1683343540600" duration="5050000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="225347000" />
+    <option name="totallyTimeSpent" value="225763000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
