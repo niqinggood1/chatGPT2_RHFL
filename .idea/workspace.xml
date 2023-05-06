@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93a72af7-911e-4761-a676-8271735d1568" name="Default Changelist" comment="" />
+    <list default="true" id="93a72af7-911e-4761-a676-8271735d1568" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/config(1).json" beforeDir="false" afterPath="$PROJECT_DIR$/model/config(1).json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/model/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trl/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/trl/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trl/core.py" beforeDir="false" afterPath="$PROJECT_DIR$/trl/core.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trl/gpt2.py" beforeDir="false" afterPath="$PROJECT_DIR$/trl/gpt2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trl/ppo.py" beforeDir="false" afterPath="$PROJECT_DIR$/trl/ppo.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,47 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gpt2_big_interact.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="32" selection-start-line="32" selection-end-line="34" selection-end-column="87" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/t5_interact.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="89" selection-start-line="89" selection-end-line="93" selection-end-column="10" />
-              <folding>
-                <element signature="e#166#185#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gpt2_big_train.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-column="15" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/t5_train.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="457" column="52" selection-start-line="457" selection-start-column="32" selection-end-line="457" selection-end-column="52" />
+            <state relative-caret-position="298">
+              <caret line="34" column="59" selection-start-line="34" selection-start-column="59" selection-end-line="34" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -101,8 +74,8 @@
       <find>vocab_path</find>
       <find>process_novel_data</find>
       <find>args</find>
-      <find>set_args</find>
       <find>argparse</find>
+      <find>set_args</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -129,8 +102,8 @@
         <option value="$PROJECT_DIR$/raw_corpur_process.py" />
         <option value="$PROJECT_DIR$/gpt2_big_interact.py" />
         <option value="$PROJECT_DIR$/chat_t5.py" />
-        <option value="$PROJECT_DIR$/t5_interact.py" />
         <option value="$PROJECT_DIR$/t5_train.py" />
+        <option value="$PROJECT_DIR$/t5_interact.py" />
       </list>
     </option>
   </component>
@@ -345,12 +318,12 @@
       <workItem from="1683185807161" duration="583000" />
       <workItem from="1683188829845" duration="2720000" />
       <workItem from="1683277972658" duration="2060000" />
-      <workItem from="1683343540600" duration="5050000" />
+      <workItem from="1683343540600" duration="5786000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="225763000" />
+    <option name="totallyTimeSpent" value="226499000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
@@ -593,6 +566,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/t5_train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="457" column="52" selection-start-line="457" selection-start-column="32" selection-end-line="457" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/gpt2_big_train.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -605,18 +585,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/t5_interact.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="89" selection-start-line="89" selection-end-line="93" selection-end-column="10" />
-          <folding>
-            <element signature="e#166#185#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/t5_train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="457" column="52" selection-start-line="457" selection-start-column="32" selection-end-line="457" selection-end-column="52" />
+        <state relative-caret-position="298">
+          <caret line="34" column="59" selection-start-line="34" selection-start-column="59" selection-end-line="34" selection-end-column="59" />
         </state>
       </provider>
     </entry>
