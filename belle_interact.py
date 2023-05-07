@@ -52,6 +52,7 @@ def main():
             if i <len(history):
                 if len( history[ -i ] ) + len( inputs2 )<= args.max_in_len:
                     inputs2 = history[ -i ] + inputs2
+        print('inputs2:',inputs2)
         history.append( inputs )
 
         # with_history_input =    '\n'.join( history[-args.max_history_len:] ) + inputs
