@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93a72af7-911e-4761-a676-8271735d1568" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test_belle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/belle_interact.py" beforeDir="false" afterPath="$PROJECT_DIR$/belle_interact.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,7 +22,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/t5_interact.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
+            <state relative-caret-position="300">
               <caret line="33" column="45" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="45" />
               <folding>
                 <element signature="e#166#185#0" expanded="true" />
@@ -36,10 +34,34 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/belle_interact.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="48" selection-start-line="48" selection-end-line="49" selection-end-column="109" />
+            <state relative-caret-position="275">
+              <caret line="66" column="62" selection-start-line="66" selection-start-column="62" selection-end-line="66" selection-end-column="62" />
               <folding>
                 <element signature="e#173#188#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gpt2_big_train.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="37" column="97" lean-forward="true" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="97" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gpt2_big_interact.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="147" column="12" lean-forward="true" selection-start-line="147" selection-start-column="12" selection-end-line="147" selection-end-column="59" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -74,7 +96,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>saving model for epoch</find>
       <find>self.max_len</find>
       <find>val_num</find>
       <find>save_</find>
@@ -104,6 +125,7 @@
       <find>set_args</find>
       <find>model_path</find>
       <find>repetition_penalty</find>
+      <find>outputs</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -349,19 +371,19 @@
       <workItem from="1683188829845" duration="2720000" />
       <workItem from="1683277972658" duration="2060000" />
       <workItem from="1683343540600" duration="9784000" />
-      <workItem from="1683384093632" duration="3345000" />
+      <workItem from="1683384093632" duration="6014000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="233842000" />
+    <option name="totallyTimeSpent" value="236511000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.74914676" visible="true" weight="0.05775076" />
-      <window_info id="Structure" order="1" sideWeight="0.25085324" side_tool="true" visible="true" weight="0.05775076" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.74914676" visible="true" weight="0.1793313" />
+      <window_info id="Structure" order="1" sideWeight="0.25085324" side_tool="true" visible="true" weight="0.1793313" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -542,40 +564,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/gpt2_interact.py" />
     <entry file="file://$PROJECT_DIR$/chat_t5.py" />
-    <entry file="file://$PROJECT_DIR$/gpt2_big_interact.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="32" selection-start-line="32" selection-end-line="34" selection-end-column="87" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/t5_train.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
           <caret line="457" column="52" selection-start-line="457" selection-start-column="32" selection-end-line="457" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gpt2_big_train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="15" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/t5_interact.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="33" column="45" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="45" />
-          <folding>
-            <element signature="e#166#185#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -593,10 +585,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/t5_interact.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="33" column="45" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="45" />
+          <folding>
+            <element signature="e#166#185#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gpt2_big_interact.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="147" column="12" lean-forward="true" selection-start-line="147" selection-start-column="12" selection-end-line="147" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gpt2_big_train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="37" column="97" lean-forward="true" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="97" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/belle_interact.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="48" selection-start-line="48" selection-end-line="49" selection-end-column="109" />
+        <state relative-caret-position="275">
+          <caret line="66" column="62" selection-start-line="66" selection-start-column="62" selection-end-line="66" selection-end-column="62" />
           <folding>
             <element signature="e#173#188#0" expanded="true" />
           </folding>
