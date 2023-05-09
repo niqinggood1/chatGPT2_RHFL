@@ -38,9 +38,11 @@ def main():
     args.cuda = torch.cuda.is_available() and not args.no_cuda
     from transformers import AutoTokenizer, AutoModelForCausalLM
     import sys
+    device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
     model_path = args.model_path # "./"  # You can modify the path for storing the local model
     model = AutoModelForCausalLM.from_pretrained(model_path)
+    model.to( device )
     tokenizer = AutoTokenizer.from_pretrained(  model_path)
     print("Your Input:")
     line = input()
