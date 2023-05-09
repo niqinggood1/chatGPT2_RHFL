@@ -29,7 +29,7 @@ def set_args():
     # parser.add_argument('--seed', type=int, default=None, help='设置种子用于生成随机数，以使得训练的结果是确定的')
     parser.add_argument('--max_in_len', default=750, type=int, required=False, help='训练时，输入数据的最大长度')
     parser.add_argument('--max_len', type=int, default=300, help='每个utterance的最大长度,超过指定长度则进行截断')
-    parser.add_argument('--max_history_len', type=int, default=1, help="dialogue history的最大长度")
+    parser.add_argument('--max_history_len', type=int, default=2, help="dialogue history的最大长度")
     parser.add_argument('--no_cuda', action='store_true', help='不使用GPU进行预测')
     return parser.parse_args()
 
@@ -42,18 +42,18 @@ def main():
     model_path = args.model_path # "./"  # You can modify the path for storing the local model
     model = AutoModelForCausalLM.from_pretrained(model_path)
     tokenizer = AutoTokenizer.from_pretrained(  model_path)
-    print("Human:")
+    print("Your Input:")
     line = input()
-    history=[  ]
+    history=''
     while line:
         inputs = 'Human: ' + line.strip() + '\n\nAssistant:'
-        inputs2 = '' + inputs
-        for i in range( 1,args.max_history_len+1 ):
-            if i <len(history):
-                if len( history[ -i ] ) + len( inputs2 )<= args.max_in_len:
-                    inputs2 = history[ -i ] + inputs2
-        print('inputs2:',inputs2)
-        history.append( inputs )
+        inputs2 = inputs
+        # for i in range( 1,args.max_history_len+1 ):
+        #     if i <=len(history):
+        #         if len( history[ -i ] ) + len( inputs2 )<= args.max_in_len:
+        #             inputs2 = history[ -i ] + inputs2
+        # print('inputs2:',inputs2)
+        # history.append( line.strip() )
 
         # with_history_input =    '\n'.join( history[-args.max_history_len:] ) + inputs
         # if len( with_history_input )<args.max_len:
@@ -64,10 +64,9 @@ def main():
                                  temperature=args.temperature, repetition_penalty=args.repetition_penalty )
         #outputs = model.generate(input_ids, max_new_tokens=200, do_sample=True, top_k=30, top_p=0.85, temperature=0.35, repetition_penalty=1.2)
         rets = tokenizer.batch_decode(outputs, skip_special_tokens=True)
-
-        print("Assistant:\n" + rets[0].strip().replace(inputs2, ""))
-
-        print("\n------------------------------------------------\nHuman:")
+        history = rets[0]
+        print("模型:\n" + rets[0].strip().replace(inputs2, ""))
+        print("\n------------------------------------------------\n Your Input:")
         line = input()
 
 if __name__ == '__main__':
